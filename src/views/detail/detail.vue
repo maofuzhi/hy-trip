@@ -45,7 +45,7 @@ const houseId = route.params.id
 const detailInfos = ref({})
 const mainPart = computed(() => detailInfos.value.mainPart)
 getDetailInfo(houseId).then(res => {
-  detailInfos.value = res.data
+  detailInfos.value = res.data || {}
 })
 
 // 监听返回按钮的点击
